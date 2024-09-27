@@ -1,0 +1,14 @@
+from Magazin.task1.models import Buyer, Game
+G=Game.objects
+B=Buyer.objects
+G.create(title='Warcraft 4', cost=100, size=26, description='Это долгожданный Варкрафт 4!', age_limited=True)
+G.create(title='Portal 3', cost=100, size=26, description='Это долгожданный портал 3!', age_limited=False)
+G.create(title='Half-life 3', cost=100, size=26, description='Это долгожданный Халв Лайф 3!', age_limited=True)
+B.create(name='Nagibator5000', balance=1000, age=23)
+B.create(name='Ugibator4000', balance=5000, age=21)
+B.create(name='PR0_100', balance=100, age=19)
+B.create(name='LOL_KEK', balance=500, age=17)
+B.create(name='Pirotehnik', balance=1200, age=18)
+G.get(id=2).buyer.set((1, 2))
+G.get(id=1).buyer.set((1, 2, 4))
+G.get(id=3).buyer.set((1, 2, 3))
